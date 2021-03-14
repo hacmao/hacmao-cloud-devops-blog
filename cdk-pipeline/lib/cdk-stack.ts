@@ -16,15 +16,6 @@ export class Pipeline extends cdk.Stack {
         });
         
         new cdk.CfnOutput(this, 'hostUrl', { value: hostBucket.bucketWebsiteUrl });
-        
-        // =====================================================================
-        // Github source
-        // =====================================================================
-        const gitHubSource = codebuild.Source.gitHub({
-            owner: 'hacmao',
-            repo: 'hacmao-cloud-devops-blog',
-            fetchSubmodules: true,
-        });
 
         // =====================================================================
         //  Output
