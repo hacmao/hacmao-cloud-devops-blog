@@ -1,5 +1,6 @@
 # How I create this page ?
 
+(http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/)
 Hôm nay, mình nổi hứng muốn tạo một blog cho AWS cũng như DevOps, cũng như thực hành các kiến thức đã học thì mình nghĩ tới việc tạo một blog sẽ sử dụng CI/CD để tự động build khi có thay đổi.  
 
 ## Tạo giao diện
