@@ -36,7 +36,10 @@ export class Pipeline extends cdk.Stack {
         // Build project
         // =====================================================================
         const hexoBuild = new codebuild.PipelineProject(this, 'hexoBuild', {
-            buildSpec: codebuild.BuildSpec.fromSourceFilename('cdk-pipeline/lib/buildspec.yml')
+            buildSpec: codebuild.BuildSpec.fromSourceFilename('cdk-pipeline/lib/buildspec.yml'),
+            environment: {
+                buildImage: codebuild.LinuxBuildImage.AMAZON_LINUX_2_3
+            },
         });
 
         // =====================================================================
