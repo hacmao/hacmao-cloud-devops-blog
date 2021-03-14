@@ -361,7 +361,7 @@
                     },
                     "source": {
                       "type": "CODEPIPELINE",
-                      "buildSpec": "lib/buildspec.yml"
+                      "buildSpec": "cdk-pipeline/lib/buildspec.yml"
                     },
                     "encryptionKey": {
                       "Fn::GetAtt": [

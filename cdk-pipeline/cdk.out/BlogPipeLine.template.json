@@ -263,7 +263,7 @@
           ]
         },
         "Source": {
-          "BuildSpec": "lib/buildspec.yml",
+          "BuildSpec": "cdk-pipeline/lib/buildspec.yml",
           "Type": "CODEPIPELINE"
         },
         "EncryptionKey": {
