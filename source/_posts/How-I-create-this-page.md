@@ -63,3 +63,5 @@ hexo new page 'aboutme'
 Mình sẽ làm CI/CD đơn giản thôi. Tạo một `Codepipeline` lấy code từ github hoặc codecommit, sau đó tiến hành dùng `Codebuild` tạo 1 cloudformation để deploy app lên S3 Bucket.  
 
 Mình đã nghĩ tới việc tạo container cho chuyên nghiệp, cơ mà thế thì blog lại tốn kha khá chi phí duy trì cho ECS, NAT, ELB, ... Nên thôi sự lựa chọn S3 vừa dễ setup lại hợp với túi tiền.  
+
+![cicd](img/2021-03-14-12-29-29.png)  
