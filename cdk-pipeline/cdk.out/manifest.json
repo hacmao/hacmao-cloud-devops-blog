@@ -1,0 +1,116 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "BlogPipeLine": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "BlogPipeLine.template.json"
+      },
+      "metadata": {
+        "/BlogPipeLine/hacmaoBlog/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hacmaoBlog29A2E2D3",
+            "trace": [
+              "new Bucket (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1331:22)",
+              "new Pipeline (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/lib/cdk-stack.ts:11:28)",
+              "Object.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/bin/cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/home/hacmao/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/BlogPipeLine/hacmaoBlog/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hacmaoBlogPolicy793D2EB2",
+            "trace": [
+              "new BucketPolicy (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:42:21)",
+              "Bucket.addToResourcePolicy (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:504:21)",
+              "Function.addToPrincipalOrResource (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:45)",
+              "Bucket.grantPublicAccess (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:683:22)",
+              "new Bucket (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1394:12)",
+              "new Pipeline (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/lib/cdk-stack.ts:11:28)",
+              "Object.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/bin/cdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/home/hacmao/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/BlogPipeLine/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/BlogPipeLine/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/home/hacmao/Documents/aws/my-blog/hacmaoblog/cdk/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
