@@ -16,6 +16,73 @@ export class Pipeline extends cdk.Stack {
         });
         
         new cdk.CfnOutput(this, 'hostUrl', { value: hostBucket.bucketWebsiteUrl });
+        
+        // =====================================================================
+        // Github source
+        // =====================================================================
+        const gitHubSource = codebuild.Source.gitHub({
+            owner: 'hacmao',
+            repo: 'hacmao-cloud-devops-blog',
+            fetchSubmodules: true,
+        });
 
+        // =====================================================================
+        //  Output
+        // =====================================================================
+        const repoOutput = new codepipeline.Artifact('RepoOutput');
+        const hexoBuildOutput = new codepipeline.Artifact('HexoBuildOutput');
+
+        // =====================================================================
+        // Build project
+        // =====================================================================
+        const hexoBuild = new codebuild.PipelineProject(this, 'hexoBuild', {
+            buildSpec: codebuild.BuildSpec.fromSourceFilename('lib/buildspec.yml')
+        });
+
+        // =====================================================================
+        // Pipeline 
+        // =====================================================================
+        const pipeline = new codepipeline.Pipeline(this, 'pipeline', {
+            pipelineName: 'BlogPipeline'
+        });
+
+        pipeline.addStage({
+            stageName: 'GitHub',
+            actions: [
+                new codepipeline_actions.GitHubSourceAction({
+                    actionName: 'GitHubSource',
+                    repo: 'hacmao-cloud-devops-blog',
+                    owner: 'hacmao',
+                    branch: 'master',
+                    oauthToken: cdk.SecretValue.secretsManager('my-github-token', { 
+                        jsonField : 'my-github-token'
+                    }),
+                    output: repoOutput
+                })
+            ]
+        });
+
+        pipeline.addStage({
+            stageName: 'CodeBuild',
+            actions: [
+                new codepipeline_actions.CodeBuildAction({
+                    actionName: 'BuildHexo',
+                    project: hexoBuild,
+                    input: repoOutput,
+                    outputs: [ hexoBuildOutput ]
+                })
+            ]
+        });
+
+        pipeline.addStage({
+            stageName: 'Deploy',
+            actions: [
+                new codepipeline_actions.S3DeployAction({
+                    actionName: 'S3Deploy',
+                    bucket: hostBucket,
+                    input: hexoBuildOutput
+                })   
+            ]
+        })
     }
 }
