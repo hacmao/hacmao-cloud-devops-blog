@@ -20,16 +20,16 @@ Bỏ qua phần đầu về việc tạo ứng dụng ra sao, database thế nà
 
 + `/`: hiển thị `Home`  
 
-![home](img/2021-03-15-11-28-25.png)  
+![home](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-15-11-28-25.png)  
 
 + `/sharks`: hiển thị giao diện để thêm shark
 
-![shark](img/sharks.png)  
+![shark](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/sharks.png)  
 
 + `/sharks/addsharks`: endpoint khi submit form sẽ thực hiện post request để thêm dữ liệu vào database
 + `/sharks/getshark`: hiển thị tất cả các sharks có trong database  
 
-![info](img/2021-03-15-11-30-17.png)  
+![info](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-15-11-30-17.png)  
 
 Các package của project có thể đã cũ, chúng ta có thể update lên phiên bản mới nhất bằng lệnh :  
 
@@ -304,7 +304,7 @@ Kiểm tra các container đang chạy :
 docker ps
 ```
 
-![docker-ps](img/2021-03-15-16-09-43.png)  
+![docker-ps](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-15-16-09-43.png)  
 
 Truy cập vào mạng localhost port 80 để test giao diện app.  
 

@@ -185,6 +185,6 @@ pipeline.addStage({
 
 Cuối cùng chúng ta có pipeline:  
 
-![cicd](img/2021-03-14-12-29-29.png)  
+![cicd](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-14-12-29-29.png)  
 
 Yeah không quá phức tạp mà ta có thể thực hành build một pipeline để tạo 1 blog đơn giản. Giờ có chỗ viết blog mới rồi :vv kaka  
