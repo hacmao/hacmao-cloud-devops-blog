@@ -148,7 +148,7 @@ Sau một hồi thử nghiệm thì mình thấy với lệnh `docker compose up
 
 Trong một số trường hợp, ta đã có sẵn một cluster và muốn deploy ứng dụng của ta lên đó. Thì ta vẫn có thể cấu hình cho `docker compose` thực hiện được.  
 
-```yml
+```yml docker-compose.yml
 x-aws-vpc: "vpc-00b896528d5656749"
 x-aws-cluster: "nodejs-app"
 x-aws-loadbalancer: "nodejs-NLB"
@@ -158,7 +158,7 @@ Ta cũng có thể config thêm về `network`, `ports`, `volumes`, `deploy` ...
 
 Bạn có thể tham khảo file cấu hình của mình :  
 
-```yml
+```yml docker-compose.yml
 version: '3'
 
 x-aws-vpc: "vpc-00b896528d5656749"
