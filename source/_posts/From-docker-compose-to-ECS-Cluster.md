@@ -233,3 +233,9 @@ Ta sẽ có url tới website.
 ![web](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-17-14-13-28.png)  
 
 Vậy là ta đã deploy thành công container lên ECS cluster.  
+
+Suýt nữa mình đã quên một việc quan trọng =)) Việc tạo volume ngoài có vẻ tốn khá nhiều tiền, do mình thử nghiệm tới lui, mount target các kiểu nên gây ra tổn thất một số tiền không hề nhỏ =(((  
+
+![bill](http://hacmao-blog.s3-website-ap-southeast-1.amazonaws.com/img/2021-03-17-14-16-59.png)  
+
+Nhìn bảng giá mà lòng đau như cắt hmu hmu =(( Có thể bỏ qua phần mount volume cũng được.  
